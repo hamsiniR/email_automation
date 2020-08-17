@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 17 14:45:14 2020
-
-@author: HP
-"""
 
 import os
 import smtplib
@@ -11,8 +5,7 @@ from email.message import EmailMessage
 
 email=os.environ.get('email')
 password=os.environ.get('pass')
-print(email)
-print(password)
+
 
 contacts=[email,'hamsinishreyas3598@gmail.com']
 
@@ -22,7 +15,7 @@ msg['From']=email
 #msg['To']=email
 msg['To']=contacts
 msg.set_content("yayy")
-
+# to add html directly to our mail 
 msg.add_alternative("""\
 <!DOCTYPE html>
 <html>
