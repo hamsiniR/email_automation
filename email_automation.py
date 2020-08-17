@@ -8,7 +8,7 @@ password=os.environ.get('pass')
 
 #We are using the SMTP class to connect to a gmail account
 with smtplib.SMTP('smtp.gmail.com',587) as smtp:
-    # ehlo() to ge
+    # command sent by an email server to identify itself when connecting to another email server to start the process of sending an email
     smtp.ehlo()
     smtp.starttls()
     smtp.ehlo()
