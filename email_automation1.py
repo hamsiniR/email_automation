@@ -1,19 +1,16 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 17 11:53:47 2020
-
-@author: HP
-"""
 
 
+
+#python -m smtpd -c DebuggingServer -n localhost:1025 
+# the above command must be typed on local host
 
 import os
 import smtplib
 
 email=os.environ.get('email')
 password=os.environ.get('pass')
-print(email)
-print(password)
+
+# set up an email debugging server on local host
 
 with smtplib.SMTP('localhost',1025) as smtp:
     
